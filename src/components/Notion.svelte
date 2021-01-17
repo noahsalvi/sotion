@@ -1,22 +1,38 @@
 <script lang="ts">
   import type Block from "../models/block";
-  import Error from "./Error.svelte";
-  import Page from "./Page.svelte";
+  import {
+    Page,
+    Text,
+    Error,
+    SubHeader,
+    SubSubHeader,
+    Header,
+    CollectionViewPage,
+  } from "./blocks";
+  import Image from "./blocks/Image.svelte";
+  import Quote from "./blocks/Quote.svelte";
+  import ToDo from "./blocks/ToDo.svelte";
+
+  const blockTypeComponentMap = {
+    page: Page,
+    error: Error,
+    text: Text,
+    header: Header,
+    sub_header: SubHeader,
+    sub_sub_header: SubSubHeader,
+    to_do: ToDo,
+    image: Image,
+    quote: Quote,
+    collection_view_page: CollectionViewPage,
+  };
 
   export let blocks: Block[];
-  // $: blocks.forEach((block) => console.log(block.properties));
 
   function mapNotionComponent(block: Block) {
-    const typeMapEntries = Object.entries(notionTypeMap);
-    let componentBlock;
-    typeMapEntries.find(([key, value]) => {
-      console.log(key);
-      if (key === block.type) componentBlock = value;
-    });
+    const componentBlock = blockTypeComponentMap[block.type];
+
     return componentBlock ?? Error;
   }
-
-  const notionTypeMap = [{ page: Page }];
 </script>
 
 {#each blocks as block}

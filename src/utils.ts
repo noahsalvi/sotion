@@ -36,3 +36,20 @@ function beautifyBlockProperties(properties: RawBlockProperties) {
 
   return blockProperties;
 }
+
+export function blockToImageUrl(block: Block) {
+  const url = block.properties.source;
+  const imageUrl = new URL(
+    url.startsWith("https://www.notion.so")
+      ? url
+      : `https://www.notion.so${
+          url.startsWith("/image") ? url : `/image/${encodeURIComponent(url)}`
+        }`
+  );
+
+  imageUrl.searchParams.set("table", block.parent_table);
+  imageUrl.searchParams.set("id", block.id);
+  imageUrl.searchParams.set("cache", "v2");
+
+  return imageUrl;
+}

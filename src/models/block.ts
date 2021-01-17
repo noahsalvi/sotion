@@ -3,6 +3,7 @@ export default class Block {
   type: string;
   properties: BlockProperties;
   format: BlockFormat;
+  parent_table: string;
 }
 
 export interface BlockProperties {

@@ -30,8 +30,9 @@ class Notion {
     );
     const rawBlocks = await res.json();
     const blocks = createBlocksFromJson(rawBlocks);
+    const meta = this.scope.find((col) => col.id === id);
 
-    return blocks;
+    return { blocks, meta };
   }
 
   async slugTable(slug, context) {
