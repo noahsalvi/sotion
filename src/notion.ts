@@ -1,4 +1,4 @@
-import { createBlocksFromJson } from ".";
+import { createBlocksFromJson } from "./utils";
 
 class Notion {
   scopeId = "";
