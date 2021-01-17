@@ -1,4 +1,4 @@
 <script>
-  export let blocks;
-  blocks;
+  export let block;
+  block;
 </script>
