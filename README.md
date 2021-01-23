@@ -5,10 +5,9 @@ Demo: https://svelte-notion-demo-56586.ondigitalocean.app/
 
 ## Setting Up
 
-- Run `npm install --save-dev @noahsalvi/svelte-notion`
+- Run `npm install -D @noahsalvi/svelte-notion`
 
-## Usage
-
-UI Component: Notion
-fetching Data: notion
-TODO
+## Usage - TODO
+`import { Notion, notion } from "@noahsalvi/svelte-notion";` <br>
+- UI Component: <Notion {blocks} /> <br>
+- Fetching Pages/Table: notion
