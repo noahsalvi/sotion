@@ -1,5 +1,5 @@
 {
-  "name": "svelte-notion",
+  "name": "@noahsalvi/svelte-notion",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
@@ -33,7 +33,14 @@
     "typescript": "^4.0.3"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "notion",
+    "sapper",
+    "ssr",
+    "ts",
+    "typescript",
+    "component",
+    "renderer"
   ],
   "description": "A base for building shareable Svelte components written in Typescript.",
   "version": "1.0.0",
