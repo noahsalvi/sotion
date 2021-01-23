@@ -10,6 +10,7 @@
 
 <style>
   .notion-quote {
+    margin: 0;
     box-sizing: border-box;
     margin-left: 0;
     border-left: 3px solid black;
