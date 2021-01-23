@@ -31,6 +31,9 @@
 {/if}
 
 <style>
+  img {
+    max-width: 100%;
+  }
   .notion-figure {
     margin: 0;
     margin-bottom: 20px;
