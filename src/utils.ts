@@ -1,4 +1,5 @@
 import Block from "./models/block";
+import BlockPage from "./models/blocks/page";
 
 export function createBlocksFromJson(json: Object) {
   const objectArray = Object.values(json);
@@ -88,7 +89,6 @@ function beautifyBlockProperties(object: { properties: [] }) {
 
 export function blockToImageUrl(block: Block) {
   const url = block.properties.source[0][0];
-  console.log(url);
 
   if (!url) return "";
   const imageUrl = new URL(
@@ -100,6 +100,38 @@ export function blockToImageUrl(block: Block) {
   );
 
   imageUrl.searchParams.set("table", block.parent_table);
+  imageUrl.searchParams.set("id", block.id);
+  imageUrl.searchParams.set("cache", "v2");
+
+  return imageUrl;
+}
+
+export function getPageCoverUrl(url: string) {
+  if (!url) return "";
+  let imageUrl = "";
+  if (url.startsWith("/images")) {
+    imageUrl = `https://notion.so${url}`;
+  } else {
+    imageUrl = url;
+  }
+
+  return imageUrl;
+}
+
+export function getPageIconImageUrl(block: BlockPage) {
+  const url = block.format.page_icon;
+  console.log(url);
+
+  if (!url) return "";
+  const imageUrl = new URL(
+    url.startsWith("https://www.notion.so")
+      ? url
+      : `https://www.notion.so${
+          url.startsWith("/image") ? url : `/image/${encodeURIComponent(url)}`
+        }`
+  );
+
+  imageUrl.searchParams.set("table", "block");
   imageUrl.searchParams.set("id", block.id);
   imageUrl.searchParams.set("cache", "v2");
 

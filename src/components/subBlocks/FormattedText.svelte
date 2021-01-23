@@ -2,7 +2,6 @@
   export let text;
 
   function isLink(segment) {
-    console.log(segment[1]?.[0][0]);
     return segment[1]?.[0]?.[0] === "a";
   }
 
@@ -12,7 +11,6 @@
 
   function classForSegment(segment) {
     return segment[1]?.reduce((prev, [curr]) => {
-      console.warn(curr);
       switch (curr) {
         case "b": {
           prev += "bold ";
@@ -46,6 +44,9 @@
     <span class={classForSegment(segment)}>{segment[0]}</span>
   {/if}
 {/each}
+{#if !text}
+  <br />
+{/if}
 
 <style>
   span {
