@@ -42,7 +42,7 @@
     "component",
     "renderer"
   ],
-  "description": "A base for building shareable Svelte components written in Typescript.",
+  "description": "Notion as a CMS for Svelte.",
   "version": "1.0.0",
   "repository": {
     "type": "git",
