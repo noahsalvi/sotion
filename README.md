@@ -1,14 +1,13 @@
 # svelte-notion - Render Notion in Svelte
 
-With this package you can use Notion as a CMS for your Svelte Project and its pretty easy! 😊
+With this package you can use Notion as a CMS for your Svelte Project and its pretty easy! 😊<br>
 Demo: https://svelte-notion-demo-56586.ondigitalocean.app/
 
 ## Setting Up
 
-- Run `npm install --save-dev @noahsalvi/svelte-notion`
+- Run `npm install -D @noahsalvi/svelte-notion`
 
-## Usage
-
-UI Component: Notion
-fetching Data: notion
-TODO
+## Usage - TODO
+`import { Notion, notion } from "@noahsalvi/svelte-notion";` <br>
+- UI Component: <Notion {blocks} /> <br>
+- Fetching Pages/Table: notion
