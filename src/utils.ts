@@ -120,7 +120,6 @@ export function getPageCoverUrl(url: string) {
 
 export function getPageIconImageUrl(block: BlockPage) {
   const url = block.format.page_icon;
-  console.log(url);
 
   if (!url) return "";
   const imageUrl = new URL(

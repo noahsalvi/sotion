@@ -2,7 +2,7 @@
   export let text;
 
   function isLink(segment) {
-    return segment[1]?.[0]?.[0] === "a";
+    return segment[1] && segment[1][0] && segment[1][0][0] === "a";
   }
 
   function getLink(segment) {

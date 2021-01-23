@@ -24,6 +24,8 @@
        background-position-y: calc(100% - {pageCoverPosition}%)"
     />
     <div class="page-cover-placeholder" />
+  {:else}
+    <div class="no-page-cover-spacer" />
   {/if}
   {#if pageIcon}
     {#if pageIconImage}
@@ -71,5 +73,9 @@
 
   .page-cover-placeholder {
     height: 250px;
+  }
+
+  .no-page-cover-spacer {
+    height: 50px;
   }
 </style>
