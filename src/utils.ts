@@ -4,7 +4,7 @@ export function createBlocksFromJson(json: Object) {
   const objectArray = Object.values(json);
   const rawBlocks = objectArray.map(({ value }) => {
     if (!value) return {};
-    if (value.properties) beautifyBlockProperties(value);
+    // if (value.properties) beautifyBlockProperties(value);
     return value;
   });
 
@@ -87,7 +87,8 @@ function beautifyBlockProperties(object: { properties: [] }) {
 }
 
 export function blockToImageUrl(block: Block) {
-  const url = block.properties.source;
+  const url = block.properties.source[0][0];
+  console.log(url);
 
   if (!url) return "";
   const imageUrl = new URL(

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type BlockPage from "../../models/blocks/page";
+  import FormattedText from "../subBlocks/FormattedText.svelte";
 
   export let block: BlockPage;
   const pageIcon = block.format?.page_icon;
@@ -7,7 +8,7 @@
 
 {#if block.properties.title}
   <h1 class="page-title">
-    {block.properties.title}
+    <FormattedText text={block.properties.title} />
     {#if pageIcon}
       <span class="page-icon">
         {pageIcon}

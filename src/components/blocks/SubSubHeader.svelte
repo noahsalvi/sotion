@@ -1,8 +1,11 @@
 <script lang="ts">
   import type Block from "../../models/block";
+  import FormattedText from "../subBlocks/FormattedText.svelte";
 
   export let block: Block;
   const title = block.properties?.title;
 </script>
 
-<h3 class="notion-subsubheader">{title}</h3>
+<h3 class="notion-subsubheader">
+  <FormattedText text={title} />
+</h3>

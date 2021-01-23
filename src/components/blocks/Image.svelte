@@ -1,6 +1,7 @@
 <script lang="ts">
   import type BlockImage from "../../models/blocks/image";
   import { blockToImageUrl } from "../../utils";
+  import FormattedText from "../subBlocks/FormattedText.svelte";
 
   export let block: BlockImage;
 
@@ -18,7 +19,9 @@
       class:full-width={block.format.block_full_width}
       alt="notion"
     />
-    <figcaption class="notion-figure-caption">{caption}</figcaption>
+    <figcaption class="notion-figure-caption">
+      <FormattedText text={caption} />
+    </figcaption>
   </figure>
 {:else}
   <img

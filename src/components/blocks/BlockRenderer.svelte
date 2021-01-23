@@ -10,7 +10,7 @@
   import Quote from "./Quote.svelte";
   import CollectionViewPage from "./CollectionViewPage.svelte";
   import ColumnList from "./ColumnList.svelte";
-  import List from "./List.svelte";
+  import List from "../subBlocks/List.svelte";
   import Column from "./Column.svelte";
 
   export const blockTypeComponentMap = {

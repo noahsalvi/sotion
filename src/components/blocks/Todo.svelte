@@ -1,5 +1,6 @@
 <script lang="ts">
   import type Block from "../../models/block";
+  import FormattedText from "../subBlocks/FormattedText.svelte";
 
   export let block: Block;
   const title = block.properties?.title ?? "";
@@ -8,5 +9,5 @@
 
 <div>
   <input type="checkbox" {checked} on:click|preventDefault />
-  {title}
+  <FormattedText text={title} />
 </div>
