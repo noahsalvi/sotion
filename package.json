@@ -1,30 +1,50 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "svelte-notion",
+  "svelte": "dist/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.umd.js",
+  "types": "dist/ts/index.d.ts",
   "scripts": {
+    "prebuild": "rm -rf ./dist",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
-    "@tsconfig/svelte": "^1.0.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0",
-    "svelte-check": "^1.0.0",
-    "svelte-preprocess": "^4.0.0",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.3"
+    "@tsconfig/svelte": "^1.0.10",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "rollup": "^2.32.0",
+    "rollup-plugin-execute": "^1.1.1",
+    "rollup-plugin-filesize": "^9.0.2",
+    "rollup-plugin-svelte": "^6.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^3.24.0",
+    "svelte-check": "^1.0.60",
+    "svelte-preprocess": "^4.5.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
   },
-  "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "svelte-notion": "^0.0.3"
-  }
+  "keywords": [
+    "svelte"
+  ],
+  "description": "A base for building shareable Svelte components written in Typescript.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahVersace/svelte-notion.git"
+  },
+  "author": "Noah Salvi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoahVersace/svelte-notion/issues"
+  },
+  "homepage": "https://github.com/NoahVersace/svelte-notion#readme"
 }

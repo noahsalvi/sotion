@@ -4,16 +4,16 @@
   export let block: Block;
 </script>
 
-<main>
+<div>
   Block type: <span>{block.type}</span> unknown<br />
 
   <div class="json">
     {JSON.stringify(block)}
   </div>
-</main>
+</div>
 
 <style>
-  main {
+  div {
     width: 100%;
     background: whitesmoke;
     padding: 10px;

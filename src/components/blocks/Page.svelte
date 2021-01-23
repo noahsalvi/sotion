@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type Block from "../../models/block";
+  import type BlockPage from "../../models/blocks/page";
 
-  export let block: Block;
+  export let block: BlockPage;
   const pageIcon = block.format?.page_icon;
 </script>
 

@@ -1,21 +1,25 @@
 import { createBlocksFromJson } from "./utils";
 
 class Notion {
-  scopeId = "";
+  private scopeId = "";
   scope = [];
 
   get isScopeUpdated() {
     return this.scope.includes(this.scopeId);
   }
 
+  setScope(id: string) {
+    this.scopeId = id;
+  }
+
   async fetchPage(id, context) {
-    const res = await context.fetch(
+    const res: Response = await context.fetch(
       `https://notion-api.splitbee.io/v1/page/${id}`
     );
     const rawBlocks = await res.json();
     const blocks = createBlocksFromJson(rawBlocks);
 
-    return blocks;
+    return JSON.stringify(blocks);
   }
 
   async slugPage(slug, context) {
@@ -29,9 +33,8 @@ class Notion {
       `https://notion-api.splitbee.io/v1/page/${id}`
     );
     const rawBlocks = await res.json();
-    const blocks = createBlocksFromJson(rawBlocks);
+    const blocks = JSON.stringify(createBlocksFromJson(rawBlocks));
     const meta = this.scope.find((col) => col.id === id);
-
     return { blocks, meta };
   }
 

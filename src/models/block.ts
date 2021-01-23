@@ -1,8 +1,9 @@
-export default class Block {
+export default interface Block {
   id: string;
   type: string;
   properties: BlockProperties;
-  format: BlockFormat;
+  format: {};
+  content: Block[];
   parent_table: string;
 }
 
@@ -10,8 +11,4 @@ export interface BlockProperties {
   title: string;
   source: string;
   checked: string;
-}
-
-interface BlockFormat {
-  page_icon: string;
 }
