@@ -43,7 +43,7 @@
     "renderer"
   ],
   "description": "Notion as a CMS for Svelte.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NoahVersace/svelte-notion.git"
