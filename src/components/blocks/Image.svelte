@@ -8,6 +8,8 @@
   const caption = block?.properties?.caption;
 </script>
 
+<slot />
+
 {#if caption}
   <figure class="notion-figure">
     <img
