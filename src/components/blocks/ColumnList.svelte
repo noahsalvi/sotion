@@ -5,10 +5,8 @@
 <style>
   .notion-column-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-  }
-
-  :global(.notion-column-list :last-child) {
-    margin-right: 0;
+    margin: 0 calc(var(--notion-column-gap) * -1);
   }
 </style>

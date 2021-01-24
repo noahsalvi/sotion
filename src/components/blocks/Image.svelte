@@ -17,6 +17,7 @@
   <figure
     class="notion-figure"
     class:full-width={block.format.block_full_width}
+    class:page-width={block.format.block_page_width}
     bind:clientHeight={fullWidthImageHeight}
   >
     <img
@@ -44,6 +45,7 @@
       src={imageUrl.toString()}
       class="notion-image"
       width="{block.format.block_width}px"
+      class:page-width={block.format.block_page_width}
       alt="notion"
     />
   </div>
@@ -65,6 +67,10 @@
   }
 
   .full-width img {
+    width: 100%;
+  }
+
+  .page-width {
     width: 100%;
   }
 

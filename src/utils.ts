@@ -60,7 +60,10 @@ function nestContents(object: { content: any[] }, rawBlocks: Block[]) {
         if (object.content) {
           nestContents(object, rawBlocks);
         }
-        if (object.type === "numbered_list") {
+        if (
+          object.type === "numbered_list" ||
+          object.type === "bulleted_list"
+        ) {
           groupListItems(i, rawBlocks);
         }
 

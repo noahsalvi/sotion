@@ -2,7 +2,7 @@ export default interface Block {
   id: string;
   type: string;
   properties: BlockProperties;
-  format: {};
+  format: any;
   content: Block[];
   parent_table: string;
 }

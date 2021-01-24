@@ -44,7 +44,7 @@
 {#if block.type === "column_list"}
   <ColumnList>
     {#each block.content as column}
-      <Column>
+      <Column block={column}>
         {#each column.content as columnContent}
           <svelte:self block={columnContent} />
         {/each}

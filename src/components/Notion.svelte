@@ -12,3 +12,13 @@
     <BlockRenderer {block} />
   {/each}
 </section>
+
+<style>
+  :global(section.notion *) {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --notion-column-gap: 20px;
+  }
+</style>
