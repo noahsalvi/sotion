@@ -4,14 +4,19 @@
 
   /** This needs to be the output of notion.fetchPage() or notion.slugPage() */
   export let blocks: string;
-  const parsedBlocks: Block[] = JSON.parse(blocks);
+
+  let parsedBlocks: Block[] = blocks && JSON.parse(blocks);
 </script>
 
-<section class="notion">
-  {#each parsedBlocks as block}
-    <BlockRenderer {block} />
-  {/each}
-</section>
+{#if parsedBlocks}
+  <section class="notion">
+    {#each parsedBlocks as block}
+      <BlockRenderer {block} />
+    {/each}
+  </section>
+{:else}
+  <div class="error">The given blocks are not valid</div>
+{/if}
 
 <style>
   :global(section.notion *) {
@@ -20,5 +25,9 @@
 
   :root {
     --notion-column-gap: 20px;
+  }
+
+  .error {
+    color: red;
   }
 </style>
