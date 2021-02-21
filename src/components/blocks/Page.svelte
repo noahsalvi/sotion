@@ -1,7 +1,7 @@
 <script lang="ts">
   import type BlockPage from "../../models/blocks/page";
   import { getPageCoverUrl, getPageIconImageUrl } from "../../utils";
-  import FormattedText from "../subBlocks/FormattedText.svelte";
+  import FormattedText from "./components/FormattedText.svelte";
 
   export let block: BlockPage;
   const pageTitle = block.properties?.title;

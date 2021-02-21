@@ -1,7 +1,7 @@
 <script lang="ts">
   import type BlockImage from "../../models/blocks/image";
   import { blockToImageUrl } from "../../utils";
-  import FormattedText from "../subBlocks/FormattedText.svelte";
+  import FormattedText from "./components/FormattedText.svelte";
 
   export let block: BlockImage;
 

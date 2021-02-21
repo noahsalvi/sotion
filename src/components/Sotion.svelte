@@ -1,6 +1,6 @@
 <script lang="ts">
   import type Block from "../models/block";
-  import BlockRenderer from "./blocks/BlockRenderer.svelte";
+  import BlockRenderer from "./BlockRenderer.svelte";
 
   /** This needs to be the output of sotion.fetchPage() or sotion.slugPage() */
   export let blocks: string;
