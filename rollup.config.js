@@ -1,5 +1,6 @@
 import svelte from "rollup-plugin-svelte";
-import resolve from "@rollup/plugin-node-resolve";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
 import execute from "rollup-plugin-execute";
@@ -37,7 +38,8 @@ export default [
       svelte({
         preprocess: sveltePreprocess(),
       }),
-      resolve(),
+      nodeResolve(),
+      commonjs(),
       typescript(),
     ],
   },

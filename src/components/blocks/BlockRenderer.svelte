@@ -13,6 +13,7 @@
   import List from "../subBlocks/List.svelte";
   import Column from "./Column.svelte";
   import Divider from "./Divider.svelte";
+  import Code from "./Code.svelte";
 
   export const blockTypeComponentMap = {
     page: Page,
@@ -29,6 +30,7 @@
     column_list: ColumnList,
     column: Column,
     divider: Divider,
+    code: Code,
   };
 </script>
 

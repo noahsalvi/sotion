@@ -54,5 +54,9 @@
   "bugs": {
     "url": "https://github.com/noahsalvi/svelte-notion/issues"
   },
-  "homepage": "https://github.com/noahsalvi/svelte-notion#readme"
+  "homepage": "https://github.com/noahsalvi/svelte-notion#readme",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "prismjs": "^1.23.0"
+  }
 }
