@@ -1,15 +1,16 @@
 <script lang="ts">
   import type Block from "../models/block";
-  import BlockRenderer from "./blocks/BlockRenderer.svelte";
+  import BlockRenderer from "./BlockRenderer.svelte";
 
-  /** This needs to be the output of notion.fetchPage() or notion.slugPage() */
+  /** This needs to be the output of sotion.fetchPage() or sotion.slugPage() */
   export let blocks: string;
+  let parsedBlocks: Block[];
 
-  let parsedBlocks: Block[] = blocks && JSON.parse(blocks);
+  $: parsedBlocks = blocks && JSON.parse(blocks);
 </script>
 
 {#if parsedBlocks}
-  <section class="notion">
+  <section class="sotion">
     {#each parsedBlocks as block}
       <BlockRenderer {block} />
     {/each}
@@ -19,12 +20,12 @@
 {/if}
 
 <style>
-  :global(section.notion *) {
+  :global(section.sotion *) {
     box-sizing: border-box;
   }
 
   :root {
-    --notion-column-gap: 20px;
+    --sotion-column-gap: 20px;
   }
 
   .error {

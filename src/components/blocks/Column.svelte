@@ -16,7 +16,7 @@
 </script>
 
 <div
-  class="notion-column"
+  class="sotion-column"
   style="width: {columnWidthPercentage}%; min-width: {minWidth}"
   bind:clientWidth
 >
@@ -24,8 +24,8 @@
 </div>
 
 <style>
-  .notion-column {
-    padding: 0 var(--notion-column-gap);
+  .sotion-column {
+    padding: 0 var(--sotion-column-gap);
     flex-basis: auto;
     height: 100%;
     flex-grow: 1;

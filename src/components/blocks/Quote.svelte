@@ -1,15 +1,15 @@
 <script lang="ts">
   import type Block from "../../models/block";
-  import FormattedText from "../subBlocks/FormattedText.svelte";
+  import FormattedText from "./components/FormattedText.svelte";
 
   export let block: Block;
   const title = block.properties?.title ?? "";
 </script>
 
-<blockquote class="notion-quote"><FormattedText text={title} /></blockquote>
+<blockquote class="sotion-quote"><FormattedText text={title} /></blockquote>
 
 <style>
-  .notion-quote {
+  .sotion-quote {
     margin: 0;
     box-sizing: border-box;
     margin-left: 0;

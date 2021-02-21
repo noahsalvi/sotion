@@ -1,19 +1,19 @@
 <script context="module">
-  import Page from "./Page.svelte";
-  import Error from "./Error.svelte";
-  import Text from "./Text.svelte";
-  import Header from "./Header.svelte";
-  import SubHeader from "./SubHeader.svelte";
-  import SubSubHeader from "./SubSubHeader.svelte";
-  import ToDo from "./ToDo.svelte";
-  import Image from "./Image.svelte";
-  import Quote from "./Quote.svelte";
-  import CollectionViewPage from "./CollectionViewPage.svelte";
-  import ColumnList from "./ColumnList.svelte";
-  import List from "../subBlocks/List.svelte";
-  import Column from "./Column.svelte";
-  import Divider from "./Divider.svelte";
-  import Code from "./Code.svelte";
+  import Page from "./blocks/Page.svelte";
+  import Error from "./blocks/Error.svelte";
+  import Text from "./blocks/Text.svelte";
+  import Header from "./blocks/Header.svelte";
+  import SubHeader from "./blocks/SubHeader.svelte";
+  import SubSubHeader from "./blocks/SubSubHeader.svelte";
+  import ToDo from "./blocks/ToDo.svelte";
+  import Image from "./blocks/Image.svelte";
+  import Quote from "./blocks/Quote.svelte";
+  import CollectionViewPage from "./blocks/CollectionViewPage.svelte";
+  import ColumnList from "./blocks/ColumnList.svelte";
+  import List from "./blocks/List.svelte";
+  import Column from "./blocks/Column.svelte";
+  import Divider from "./blocks/Divider.svelte";
+  import Code from "./blocks/Code.svelte";
 
   export const blockTypeComponentMap = {
     page: Page,
@@ -35,7 +35,7 @@
 </script>
 
 <script lang="ts">
-  import type Block from "../../models/block";
+  import type Block from "../models/block";
 
   export let block: Block;
 

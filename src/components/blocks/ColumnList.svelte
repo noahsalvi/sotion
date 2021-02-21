@@ -1,12 +1,12 @@
-<section class="notion-column-list">
+<section class="sotion-column-list">
   <slot />
 </section>
 
 <style>
-  .notion-column-list {
+  .sotion-column-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 calc(var(--notion-column-gap) * -1);
+    margin: 0 calc(var(--sotion-column-gap) * -1);
   }
 </style>

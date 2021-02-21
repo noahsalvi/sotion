@@ -1,5 +1,5 @@
 {
-  "name": "@noahsalvi/svelte-notion",
+  "name": "sotion",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
@@ -37,25 +37,24 @@
   "keywords": [
     "svelte",
     "notion",
+    "cms",
+    "renderer",
     "sapper",
     "ssr",
-    "ts",
-    "typescript",
-    "component",
-    "renderer"
+    "typescript"
   ],
-  "description": "Notion as a CMS for Svelte.",
-  "version": "1.0.5",
+  "description": "Notion as a CMS for Svelte 🗂",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NoahVersace/svelte-notion.git"
+    "url": "git+https://github.com/NoahVersace/sotion.git"
   },
   "author": "Noah Salvi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noahsalvi/svelte-notion/issues"
+    "url": "https://github.com/noahsalvi/sotion/issues"
   },
-  "homepage": "https://github.com/noahsalvi/svelte-notion#readme",
+  "homepage": "https://github.com/noahsalvi/sotion#readme",
   "dependencies": {
     "prismjs": "^1.23.0"
   }
