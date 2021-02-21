@@ -6,6 +6,6 @@
   const title = block.properties?.title;
 </script>
 
-<h2 class="notion-subheader">
+<h2 class="sotion-subheader">
   <FormattedText text={title} />
 </h2>

@@ -15,24 +15,24 @@
 <slot />
 {#if caption}
   <figure
-    class="notion-figure"
+    class="sotion-figure"
     class:full-width={block.format.block_full_width}
     class:page-width={block.format.block_page_width}
     bind:clientHeight={fullWidthImageHeight}
   >
     <img
       src={imageUrl.toString()}
-      class="notion-image"
-      alt="notion"
+      class="sotion-image"
+      alt="sotion"
       width="{block.format.block_width}px"
     />
-    <figcaption class="notion-figure-caption">
+    <figcaption class="sotion-figure-caption">
       <FormattedText text={caption} />
     </figcaption>
   </figure>
   {#if block.format.block_full_width}
     <div
-      class="notion-figure-placeholder"
+      class="sotion-figure-placeholder"
       style="height: {fullWidthImageHeight}px"
     />
   {/if}
@@ -43,15 +43,15 @@
   >
     <img
       src={imageUrl.toString()}
-      class="notion-image"
+      class="sotion-image"
       width="{block.format.block_width}px"
       class:page-width={block.format.block_page_width}
-      alt="notion"
+      alt="sotion"
     />
   </div>
   {#if block.format.block_full_width}
     <div
-      class="notion-image-placeholder"
+      class="sotion-image-placeholder"
       style="height: {fullWidthImageHeight}px"
     />
   {/if}
@@ -61,7 +61,7 @@
   img {
     max-width: 100%;
   }
-  .notion-figure {
+  .sotion-figure {
     margin: 0;
     margin-bottom: 20px;
   }
@@ -74,11 +74,11 @@
     width: 100%;
   }
 
-  .notion-figure-caption {
+  .sotion-figure-caption {
     font-style: italic;
   }
 
-  :not(.notion-figure) .notion-image {
+  :not(.sotion-figure) .sotion-image {
     margin-bottom: 20px;
   }
 

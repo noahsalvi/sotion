@@ -6,10 +6,10 @@
   const title = block.properties?.title ?? "";
 </script>
 
-<blockquote class="notion-quote"><FormattedText text={title} /></blockquote>
+<blockquote class="sotion-quote"><FormattedText text={title} /></blockquote>
 
 <style>
-  .notion-quote {
+  .sotion-quote {
     margin: 0;
     box-sizing: border-box;
     margin-left: 0;

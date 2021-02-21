@@ -11,13 +11,13 @@
 </script>
 
 {#if isNumbered}
-  <ol class="notion-numbered-list">
+  <ol class="sotion-numbered-list">
     {#each block.content as listItem}
       <li><FormattedText text={getTitle(listItem)} /></li>
     {/each}
   </ol>
 {:else}
-  <ul class="notion-bulleted-list">
+  <ul class="sotion-bulleted-list">
     {#each block.content as listItem}
       <li><FormattedText text={getTitle(listItem)} /></li>
     {/each}
@@ -25,8 +25,8 @@
 {/if}
 
 <style>
-  .notion-numbered-list,
-  .notion-bulleted-list {
+  .sotion-numbered-list,
+  .sotion-bulleted-list {
     margin: 0;
     padding-left: 20px;
   }

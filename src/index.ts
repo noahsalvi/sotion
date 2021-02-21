@@ -1,2 +1,2 @@
-export { default as notion } from "./notion";
-export { default as Notion } from "./components/Notion.svelte";
+export { default as sotion } from "./sotion";
+export { default as Sotion } from "./components/Sotion.svelte";
