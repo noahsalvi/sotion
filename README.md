@@ -1,5 +1,5 @@
-
 # Sotion - Svelte Notion
+
 ### With this package you can use Notion as a CMS for your Svelte Project and its pretty easy! 😊<br>
 
 ## Installation
@@ -12,5 +12,6 @@ npm i -D sotion
 yarn add -D sotion
 ```
 
-
 ## Usage - TODO
+
+### For the moment you can checkout this demo: https://github.com/noahsalvi/sotion-sapper-demo
