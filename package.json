@@ -16,6 +16,7 @@
     "dist"
   ],
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
     "@tsconfig/svelte": "^1.0.10",
@@ -54,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/noahsalvi/svelte-notion/issues"
   },
-  "homepage": "https://github.com/noahsalvi/svelte-notion#readme"
+  "homepage": "https://github.com/noahsalvi/svelte-notion#readme",
+  "dependencies": {
+    "prismjs": "^1.23.0"
+  }
 }
