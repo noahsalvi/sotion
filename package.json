@@ -1,5 +1,7 @@
 {
   "name": "sotion",
+  "description": "Notion as a CMS for Svelte 🗂",
+  "version": "1.0.1",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
@@ -43,11 +45,10 @@
     "ssr",
     "typescript"
   ],
-  "description": "Notion as a CMS for Svelte 🗂",
-  "version": "1.0.1",
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NoahVersace/sotion.git"
+    "url": "git+https://github.com/noahsalvi/sotion.git"
   },
   "author": "Noah Salvi",
   "license": "MIT",
