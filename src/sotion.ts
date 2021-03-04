@@ -34,7 +34,6 @@ class Sotion {
 
   async fetchPage(id: string) {
     throwIfNoFetcherSet();
-    await this.getScope();
 
     const res: Response = await fetcher(`${apiUrl}page/${id}`);
     const rawBlocks = await res.json();
