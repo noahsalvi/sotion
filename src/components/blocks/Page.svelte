@@ -31,7 +31,7 @@
     {#if pageIconImage}
       <img
         src={getPageIconImageUrl(block).toString()}
-        class="page-icon-image"
+        class="page-icon image"
         alt="test"
       />
     {:else}
@@ -50,16 +50,16 @@
 
 <style>
   .page-icon {
+    position: relative;
     font-size: 70px;
   }
 
-  .page-icon-image {
+  .page-icon.image {
     height: 90px;
     margin-bottom: 30px;
   }
 
   .page-cover {
-    z-index: -1;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
