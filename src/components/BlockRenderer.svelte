@@ -14,7 +14,7 @@
   import Column from "./blocks/Column.svelte";
   import Divider from "./blocks/Divider.svelte";
   import Code from "./blocks/Code.svelte";
-  import BlockEquation from "./blocks/BlockEquation.svelte";
+  import Equation from "./blocks/Equation.svelte";
 
   export const blockTypeComponentMap = {
     page: Page,
@@ -32,7 +32,7 @@
     column: Column,
     divider: Divider,
     code: Code,
-    equation: BlockEquation,
+    equation: Equation,
   };
 </script>
 
