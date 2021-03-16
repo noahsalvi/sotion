@@ -56,6 +56,7 @@
   },
   "homepage": "https://github.com/noahsalvi/sotion#readme",
   "dependencies": {
+    "katex": "^0.13.0",
     "prismjs": "^1.23.0"
   }
 }
