@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Equation from "./Equation.svelte";
+  import KatexEquation from "./KatexEquation.svelte";
   export let text;
 
   function isLink(segment) {
@@ -42,7 +42,7 @@
   {#if isLink(segment)}
     <a class={classForSegment(segment)} href={getLink(segment)}>{segment[0]}</a>
   {:else if segment[1] && segment[1][0][0] === "e"}
-    <Equation displayMode={false} maths={segment[1][0][1]} />
+    <KatexEquation displayMode={false} maths={segment[1][0][1]} />
   {:else}
     <span class={classForSegment(segment)}>{segment[0]}</span>
   {/if}

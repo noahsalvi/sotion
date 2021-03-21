@@ -6,4 +6,4 @@
   const title = block.properties?.title ?? "";
 </script>
 
-<p class="sotion-text"><FormattedText text={title} /></p>
+<p class="text"><FormattedText text={title} /></p>

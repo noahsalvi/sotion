@@ -6,7 +6,24 @@
   export let blocks: string;
   let parsedBlocks: Block[];
 
-  $: parsedBlocks = blocks && JSON.parse(blocks);
+  $: if (blocks) {
+    // Parses the json string into a object
+    const rawParsedBlocks = JSON.parse(blocks) as any[];
+
+    // Nested pages also inlcude the pages above them, this removes them.
+    const duplicatePageIds: number[] = [];
+    rawParsedBlocks.forEach((block, index) => {
+      if (index && block.type === "page") {
+        duplicatePageIds.push(index);
+      }
+    });
+
+    duplicatePageIds
+      .reverse()
+      .forEach((index) => rawParsedBlocks.splice(index, 1));
+
+    parsedBlocks = rawParsedBlocks;
+  }
 </script>
 
 {#if parsedBlocks}

@@ -1,7 +1,7 @@
 {
   "name": "sotion",
   "description": "Notion as a CMS for Svelte 🗂",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
