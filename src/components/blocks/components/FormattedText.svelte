@@ -1,13 +1,15 @@
 <script lang="ts">
-  import Equation from "./Equation.svelte";
+  import KatexEquation from "./KatexEquation.svelte";
   export let text;
 
   function isLink(segment) {
-    return segment[1] && segment[1][0] && segment[1][0][0] === "a";
+    return (
+      segment[1] && Array.isArray(segment[1]) && segment[1].flat().includes("a")
+    );
   }
 
   function getLink(segment) {
-    return segment[1][0][1];
+    return segment[1].find((link) => link[0] === "a")[1];
   }
 
   function classForSegment(segment) {
@@ -42,7 +44,7 @@
   {#if isLink(segment)}
     <a class={classForSegment(segment)} href={getLink(segment)}>{segment[0]}</a>
   {:else if segment[1] && segment[1][0][0] === "e"}
-    <Equation displayMode={false} maths={segment[1][0][1]} />
+    <KatexEquation displayMode={false} maths={segment[1][0][1]} />
   {:else}
     <span class={classForSegment(segment)}>{segment[0]}</span>
   {/if}
