@@ -3,11 +3,13 @@
   export let text;
 
   function isLink(segment) {
-    return segment[1] && segment[1][0] && segment[1][0][0] === "a";
+    return (
+      segment[1] && Array.isArray(segment[1]) && segment[1].flat().includes("a")
+    );
   }
 
   function getLink(segment) {
-    return segment[1][0][1];
+    return segment[1].find((link) => link[0] === "a")[1];
   }
 
   function classForSegment(segment) {
