@@ -42,6 +42,15 @@ class Sotion {
     return JSON.stringify(blocks);
   }
 
+  async fetchTable(id: string) {
+    throwIfNoFetcherSet();
+
+    const res: Response = await fetcher(`${apiUrl}table/${id}`);
+    const json = await res.json();
+
+    return json;
+  }
+
   async slugPage(slug: string) {
     await this.getScope();
 
